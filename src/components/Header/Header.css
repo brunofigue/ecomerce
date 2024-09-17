@@ -1,5 +1,5 @@
 .navigator {
-  background: red;
+  background: rgb(224, 199, 199);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
