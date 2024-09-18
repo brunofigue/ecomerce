@@ -1,14 +1,11 @@
 import { useState } from "react";
 
-function Products({ initialProducts }) {
+function Products({ initialProducts,addToCart }) {
   const [products] = useState(initialProducts);
-
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
+ 
   return (
     <>
-      <h1>Lista de Productos</h1>
+      <h2>Lista de Productos</h2>
       <div className='product-list'>
         {products.map((product) => (
           <div key={product.id} className='product-item'>

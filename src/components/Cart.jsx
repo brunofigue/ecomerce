@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Cart({ cart }) {
   const getTotalPrice = () => {
     return cart.reduce((total, item) => total + item.price, 0);
@@ -7,7 +9,9 @@ function Cart({ cart }) {
     alert(`¡Compra realizada! Total: $${getTotalPrice()}`);
     // Aquí podrías hacer una llamada a una API para procesar el pago.
   };
+  
 
+ 
   return (
     <div>
       <h2>Carrito de Compras</h2>

@@ -1,8 +1,33 @@
-# React + Vite
+import React from 'react';
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+function Cart({ cart }) {
+  const getTotalPrice = () => {
+    return cart.reduce((total, item) => total + item.price, 0);
+  };
 
-Currently, two official plugins are available:
+  const handleCheckout = () => {
+    alert(`¡Compra realizada! Total: $${getTotalPrice()}`);
+    // Aquí podrías hacer una llamada a una API para procesar el pago.
+  };
+  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 
+  return (
+    <div>
+      <h2>Carrito de Compras</h2>
+      <ul>
+        {cart.map((item, index) => (
+          <li key={index}>
+            {item.name} - ${item.price}
+          </li>
+        ))}
+      </ul>
+      <h3>Total: ${getTotalPrice()}</h3>
+      <button onClick={handleCheckout} disabled={cart.length === 0}>
+        Comprar
+      </button>
+    </div>
+  );
+}
+
+export default Cart;
