@@ -1,6 +1,7 @@
 import NavLinks from "../NavLinks/NavLinks";
 import "./Header.css";
 
+
 function Header() {
   return (
     <header>

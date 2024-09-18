@@ -10,12 +10,13 @@ function App() {
   const [cart, setCart] = useState([]);
   const addToCart = (product) => {
     setCart([...cart, product]);
-  };
 
+ 
+  } 
   return (
     <div className="App">
       <Header />
-      <Products initialProducts={initialProducts} addToCart={addToCart} />
+      <Products initialProducts={initialProducts} addToCart={addToCart}/>
       <Cart cart={cart} />
       <Footer />
     </div>

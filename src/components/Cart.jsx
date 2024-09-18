@@ -10,8 +10,7 @@ function Cart({ cart }) {
     // Aquí podrías hacer una llamada a una API para procesar el pago.
   };
   
-
- 
+  
   return (
     <div>
       <h2>Carrito de Compras</h2>

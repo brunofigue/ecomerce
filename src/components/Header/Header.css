@@ -1,5 +1,6 @@
 .navigator {
-  background: rgb(235, 103, 235, 0.9);
+  font-size: x-large;
   display: flex;
   justify-content: space-around;
+  padding: 70px;
 }
